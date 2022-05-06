@@ -1,0 +1,30 @@
+# Check that we can check out a previous version.
+> init
+<<<
+> branch new
+<<<
++ a.txt a.txt
+> add a.txt
+<<<
+> commit "version 1 of a.txt"
+<<<
+> checkout new
+<<<
+> checkout new
+No need to checkout the current branch.
+<<<
++ a.txt b.txt
+> add a.txt
+<<<
+> commit "version 2 of a.txt"
+<<<
+= a.txt b.txt
+> checkout master
+<<<
++ a.txt a.txt
+> add a.txt
+<<<
+
+
+
+

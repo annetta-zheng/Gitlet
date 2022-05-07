@@ -69,7 +69,17 @@ This class is the driver class for Gitlet that runs Gitlet through Gitlet, Commi
    * Checking if a merge is necessary.
    * Determining which files (if any) have a conflict.
    * Representing the conflict in the file.
-
+14. add-remote
+- Saves the given login information under the given remote name. Attempts to push or pull from the given remote name will then attempt to use this .gitlet directory.
+15. rm-remote
+- Remove information associated with the given remote name. The idea here is that if you ever wanted to change a remote that you added, you would have to first remove it and then re-add it.
+16. push
+- Attempts to append the current branch’s commits to the end of the given branch at the given remote.
+17. fetch
+- Brings down commits from the remote Gitlet repository into the local Gitlet repository. 
+ - Copies all commits and blobs from the given branch in the remote repository into a branch named [remote name]/[remote branch name] in the local .gitlet, changing [remote name]/[remote branch name] to point to the head commit. This branch is created in the local repository if it did not previously exist.
+18. pull
+- Fetches branch [remote name]/[remote branch name] as for the fetch command, and then merges that fetch into the current branch.
 
 ### 3. Persistence
 By starting up the program `java gitlet.Main init`, it will create a repo directory and an initial commit through the command init().
@@ -91,4 +101,9 @@ All other commands:
 12. java gitlet.Main rm-branch [branch name]
 13. java gitlet.Main reset [commit id]
 14. java gitlet.Main merge [branch name]
+15. java gitlet.Main add-remote [remote name] [name of remote directory]/.gitlet
+16. java gitlet.Main rm-remote [remote name]
+17. java gitlet.Main push [remote name] [remote branch name]
+18. java gitlet.Main fetch [remote name] [remote branch name]
+19. java gitlet.Main pull [remote name] [remote branch name]
 ```

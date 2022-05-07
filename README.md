@@ -77,7 +77,7 @@ This class is the driver class for Gitlet that runs Gitlet through Gitlet, Commi
 - Attempts to append the current branch’s commits to the end of the given branch at the given remote.
 17. fetch
 - Brings down commits from the remote Gitlet repository into the local Gitlet repository. 
- - Copies all commits and blobs from the given branch in the remote repository into a branch named [remote name]/[remote branch name] in the local .gitlet, changing [remote name]/[remote branch name] to point to the head commit. This branch is created in the local repository if it did not previously exist.
+  * Copies all commits and blobs from the given branch in the remote repository into a branch named [remote name]/[remote branch name] in the local .gitlet, changing [remote name]/[remote branch name] to point to the head commit. This branch is created in the local repository if it did not previously exist.
 18. pull
 - Fetches branch [remote name]/[remote branch name] as for the fetch command, and then merges that fetch into the current branch.
 
